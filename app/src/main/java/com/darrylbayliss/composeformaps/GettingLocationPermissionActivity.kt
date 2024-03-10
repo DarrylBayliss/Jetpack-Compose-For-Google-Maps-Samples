@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -59,24 +60,28 @@ class GettingLocationPermissionActivity : ComponentActivity() {
 
             // Check if we have location permissions
             if (!allLocationPermissionsState.allPermissionsGranted) {
-                // Show a component to request permission from the user
-                Column(
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.Center,
-                    modifier = Modifier
-                        .padding(horizontal = 36.dp)
-                        .clip(RoundedCornerShape(16.dp))
-                        .background(Color.White)
-                ) {
-                    Text(
-                        modifier = Modifier.padding(top = 6.dp),
-                        textAlign = TextAlign.Center,
-                        text = "This app functions 150% times better with percise location enabled"
-                    )
-                    Button(modifier = Modifier.padding(top = 12.dp), onClick = {
-                        allLocationPermissionsState.launchMultiplePermissionRequest()
-                    }) {
-                        Text(text = "Grant Permission")
+
+                Box(modifier = Modifier.fillMaxSize(),
+                    contentAlignment = Alignment.Center) {
+                    // Show a component to request permission from the user
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.Center,
+                        modifier = Modifier
+                            .padding(horizontal = 36.dp)
+                            .clip(RoundedCornerShape(16.dp))
+                            .background(Color.White)
+                    ) {
+                        Text(
+                            modifier = Modifier.padding(top = 6.dp),
+                            textAlign = TextAlign.Center,
+                            text = "This app functions 150% times better with percise location enabled"
+                        )
+                        Button(modifier = Modifier.padding(top = 12.dp), onClick = {
+                            allLocationPermissionsState.launchMultiplePermissionRequest()
+                        }) {
+                            Text(text = "Grant Permission")
+                        }
                     }
                 }
             }

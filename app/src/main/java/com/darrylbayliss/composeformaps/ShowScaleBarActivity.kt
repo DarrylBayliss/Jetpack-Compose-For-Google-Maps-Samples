@@ -6,19 +6,14 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
 import com.google.maps.android.clustering.ClusterItem
-import com.google.maps.android.compose.Circle
 import com.google.maps.android.compose.GoogleMap
 import com.google.maps.android.compose.MapsComposeExperimentalApi
 import com.google.maps.android.compose.clustering.Clustering
@@ -78,39 +73,28 @@ class ShowScaleBarActivity : ComponentActivity() {
                 )
             }
 
-            var selectedMarker: ParkItem? by remember { mutableStateOf(null) }
-
             Box(contentAlignment = Alignment.Center) {
+
                 GoogleMap(
                     modifier = Modifier.fillMaxSize(),
                     cameraPositionState = cameraPositionState
                 ) {
-                    // You can also use ScaleBar
-                    DisappearingScaleBar(
-                        modifier = Modifier
-                            .padding(top = 5.dp, end = 15.dp)
-                            .align(Alignment.TopStart),
-                        cameraPositionState = cameraPositionState
-                    )
-
                     Clustering(items = parkMarkers,
                         onClusterClick = {
                             // Handle when the cluster is clicked
                             true
                         }, onClusterItemClick = { marker ->
                             // Handle when a marker in the cluster is clicked
-                            selectedMarker = marker
                             true
                         })
                 }
-            }
 
-            parkMarkers.forEach {
-                Circle(
-                    center = it.position,
-                    radius = 120.0,
-                    fillColor = Color.Green,
-                    strokeColor = Color.Green
+                // You can also use the ScaleBar composable
+                DisappearingScaleBar(
+                    modifier = Modifier
+                        .padding(top = 5.dp, end = 15.dp)
+                        .align(Alignment.TopStart),
+                    cameraPositionState = cameraPositionState
                 )
             }
         }

@@ -1,7 +1,6 @@
 package com.darrylbayliss.composeformaps
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -22,61 +21,39 @@ import kotlinx.coroutines.delay
 @OptIn(MapsComposeExperimentalApi::class)
 class AnimateMapActivity : ComponentActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
-
-        val hydePark = LatLng(51.508610, -0.163611)
-        val regentsPark = LatLng(51.531143, -0.159893)
-        val primroseHill = LatLng(51.539556, -0.16076088)
-
-        val crystalPalacePark = LatLng(51.42153, -0.05749)
-        val greenwichPark = LatLng(51.476688, 0.000130)
-        val lloydPark = LatLng(51.364188, -0.080703)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
         setContent {
+
+            val hydePark = LatLng(51.508610, -0.163611)
+            val regentsPark = LatLng(51.531143, -0.159893)
+            val primroseHill = LatLng(51.539556, -0.16076088)
+
+            val crystalPalacePark = LatLng(51.42153, -0.05749)
+            val greenwichPark = LatLng(51.476688, 0.000130)
+            val lloydPark = LatLng(51.364188, -0.080703)
+
             val cameraPositionState = rememberCameraPositionState {
                 position = CameraPosition.fromLatLngZoom(hydePark, 10f)
-            }
-
-            val parkMarkers = remember {
-                mutableStateListOf(
-                    ParkItem(
-                        hydePark,
-                        "Hyde Park",
-                        "Marker in hyde Park"
-                    ),
-                    ParkItem(
-                        regentsPark,
-                        "Regents Park",
-                        "Marker in Regents Park"
-                    ),
-                    ParkItem(
-                        primroseHill,
-                        "Primrose Hill",
-                        "Marker in Primrose Hill"
-                    ),
-                    ParkItem(
-                        crystalPalacePark,
-                        "Crystal Palace",
-                        "Marker in Crystal Palace"
-                    ),
-                    ParkItem(
-                        greenwichPark,
-                        "Greenwich Park",
-                        "Marker in Greenwich Park"
-                    ),
-                    ParkItem(
-                        lloydPark,
-                        "Lloyd park",
-                        "Marker in Lloyd Park"
-                    ),
-                )
             }
 
             GoogleMap(
                 modifier = Modifier.fillMaxSize(),
                 cameraPositionState = cameraPositionState
             ) {
+
+                val parkMarkers = remember {
+                    mutableStateListOf(
+                        ParkItem(hydePark, "Hyde Park", "Marker in hyde Park"),
+                        ParkItem(regentsPark, "Regents Park", "Marker in Regents Park"),
+                        ParkItem(primroseHill, "Primrose Hill", "Marker in Primrose Hill"),
+                        ParkItem(crystalPalacePark, "Crystal Palace", "Marker in Crystal Palace"),
+                        ParkItem(greenwichPark, "Greenwich Park", "Marker in Greenwich Park"),
+                        ParkItem(lloydPark, "Lloyd park", "Marker in Lloyd Park"),
+                    )
+                }
+
                 Clustering(items = parkMarkers,
                     onClusterClick = {
                         // Handle when the click is tapped
