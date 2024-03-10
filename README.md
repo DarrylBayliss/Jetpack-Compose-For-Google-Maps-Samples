@@ -1,6 +1,6 @@
 # Jetpack Compose For Google Maps Samples
 
-A collection of examples showing how to use the Jetpack Compose Components for the Google Maps SDK.
+A collection of examples showing how to use the [Jetpack Compose Components](https://github.com/googlemaps/android-maps-compose) for the Google Maps SDK.
 
 The samples include:
 
