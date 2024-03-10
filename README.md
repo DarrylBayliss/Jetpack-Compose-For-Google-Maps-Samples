@@ -4,9 +4,17 @@ A collection of examples showing how to use the Jetpack Compose Components for t
 
 # Usage
 
-1. Download the repo and open the project in Android Studio. Run the app.
+1. Download the repo and open the project in Android Studio.
 
-2. The `ShowMapActivity` runs by default. To run a different sample update the name of the Activity in `AndroidManifest.xml`
+2. In `local.properties`, add a Google Maps API key to the file.
+
+```
+MAPS_API_KEY=yourkeyhere
+```
+
+Follow the instructions on the [Maps SDK for Android](https://developers.google.com/maps/documentation/android-sdk/get-api-key) pages if you need to create an API key.
+
+3. The `ShowMapActivity` sample runs by default. To run a different sample update the name of the Activity in `AndroidManifest.xml` and run the app.
 
 ```xml
  <!-- Update the name attribute in the activity tag -->
@@ -20,3 +28,7 @@ A collection of examples showing how to use the Jetpack Compose Components for t
     </intent-filter>
 </activity>
 ```
+
+# Contributing
+
+Additional samples and bug fixes are welcome. Fork the repo and raise a pull request to make a change.
