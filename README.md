@@ -2,6 +2,18 @@
 
 A collection of examples showing how to use the Jetpack Compose Components for the Google Maps SDK.
 
+The samples include:
+
+- Showing a map containing a single marker
+- Showing a map containing multiple markers
+- Customising the window for a selected marker
+- Creating a cluster of markers
+- Getting Fine Location Permission using the permissions library from accompianist
+- Drawing shapes and polygons on the map
+- Tapping on a marker and showing street view
+- Animating the map to different markers
+- Showing the scale bar
+
 # Usage
 
 1. Download the repo and open the project in Android Studio.
