@@ -34,17 +34,6 @@ fun GettingLocationPermissionScreen() {
             position = CameraPosition.fromLatLngZoom(hydePark, 10f)
         }
 
-        GoogleMap(
-            modifier = Modifier.fillMaxSize(),
-            cameraPositionState = cameraPositionState
-        ) {
-            Marker(
-                state = MarkerState(position = hydePark),
-                title = "Hyde Park",
-                snippet = "Marker in Hyde Park"
-            )
-        }
-
         // Don't forget to add the permissions to AndroidManifest.xml
         val allLocationPermissionsState = rememberMultiplePermissionsState(
             listOf(
@@ -53,13 +42,24 @@ fun GettingLocationPermissionScreen() {
             )
         )
 
-        // Check if we have location permissions
-        if (!allLocationPermissionsState.allPermissionsGranted) {
-
-            Box(
+        Box(
+            modifier = Modifier.fillMaxSize(),
+            contentAlignment = Alignment.Center
+        ) {
+            GoogleMap(
                 modifier = Modifier.fillMaxSize(),
-                contentAlignment = Alignment.Center
+                cameraPositionState = cameraPositionState
             ) {
+                Marker(
+                    state = MarkerState(position = hydePark),
+                    title = "Hyde Park",
+                    snippet = "Marker in Hyde Park"
+                )
+            }
+
+            // Check if we have location permissions
+            if (!allLocationPermissionsState.allPermissionsGranted) {
+
                 // Show a component to request permission from the user
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,

@@ -1,18 +1,46 @@
 # Jetpack Compose For Google Maps Samples
 
+![Main Screen](/images/mainscreen.png)
+
 A collection of examples showing how to use the [Jetpack Compose Components](https://github.com/googlemaps/android-maps-compose) for the Google Maps SDK.
 
 The samples include:
 
-- Showing a map containing a single marker
-- Showing a map containing multiple markers
-- Customising the window for a selected marker
-- Creating a cluster of markers
-- Getting Fine Location Permission using the permissions library from accompianist
-- Drawing shapes and polygons on the map
-- Tapping on a marker and showing street view
-- Animating the map to different markers
-- Showing the scale bar
+## Showing a map containing a single marker
+
+![Showing a single marker](/images/showsinglemarker.png)
+
+## Showing a map containing multiple markers
+
+![Showing multiple markers](/images/showmultiplemarkers.png)
+
+## Customising the window for a selected marker
+
+![Customising window for a selected marker](/images/showcustomisedwindowmarker.png)
+
+## Creating a cluster of markers
+
+![Clustering Markers](/images/markerclustering.png)
+
+## Getting Fine Location Permission using the permissions library from accompianist
+
+![Getting Location Permission](/images/grantlocationpermission.png)
+
+## Drawing shapes and polygons on the map
+
+![Drawing Shapes and Polygons](/images/shapesandpolygons.png)
+
+## Tapping on a marker and showing street view
+
+![Showing Street View](/images/streetview.gif)
+
+## Animating the map to different markers
+
+![Animating the map](/images/animatemap.gif)
+
+## Showing the scale bar
+
+![Showing the scale bar](/images/showscalebar.png)
 
 # Usage
 
@@ -26,22 +54,9 @@ MAPS_API_KEY=yourkeyhere
 
 Follow the instructions on the [Maps SDK for Android](https://developers.google.com/maps/documentation/android-sdk/get-api-key) pages if you need to create an API key.
 
-3. Build and run the app. The `ShowMapActivity` sample runs by default.
+3. Build and run the app.
    
 4. To run a different sample update the name of the Activity in `AndroidManifest.xml` and run the app.
-
-```xml
- <!-- Update the name attribute in the activity tag -->
-<activity
-    android:name="com.darrylbayliss.composeformaps.ShowMapActivity"
-    android:exported="true"
-    android:theme="@style/Theme.ComposeForMaps">
-    <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-        <category android:name="android.intent.category.LAUNCHER" />
-    </intent-filter>
-</activity>
-```
 
 # Contributing
 
