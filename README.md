@@ -1,6 +1,8 @@
 # Jetpack Compose For Google Maps Samples
 
-![Main Screen](/images/mainscreen.png)
+<p align="center">
+  <img src="/images/mainscreen.png" width="400" height="800" />
+</p>
 
 A collection of examples showing how to use the [Jetpack Compose Components](https://github.com/googlemaps/android-maps-compose) for the Google Maps SDK.
 
@@ -8,39 +10,57 @@ The samples include:
 
 ## Showing a map containing a single marker
 
-![Showing a single marker](/images/showsinglemarker.png)
+<p align="center">
+  <img src="/images/showsinglemarker.png" width="400" height="800" />
+</p>
 
 ## Showing a map containing multiple markers
 
-![Showing multiple markers](/images/showmultiplemarkers.png)
+<p align="center">
+  <img src="/images/showmultiplemarkers.png" width="400" height="800" />
+</p>
 
 ## Customising the window for a selected marker
 
-![Customising window for a selected marker](/images/showcustomisedwindowmarker.png)
+<p align="center">
+  <img src="/images/showcustomisedwindowmarker.png" width="400" height="800" />
+</p>
 
 ## Creating a cluster of markers
 
-![Clustering Markers](/images/markerclustering.png)
+<p align="center">
+  <img src="/images/markerclustering.png" width="400" height="800" />
+</p>
 
 ## Getting Fine Location Permission using the permissions library from accompianist
 
-![Getting Location Permission](/images/grantlocationpermission.png)
+<p align="center">
+  <img src="/images/grantlocationpermission.png" width="400" height="800" />
+</p>
 
 ## Drawing shapes and polygons on the map
 
-![Drawing Shapes and Polygons](/images/shapesandpolygons.png)
+<p align="center">
+  <img src="/images/shapesandpolygons.png" width="400" height="800" />
+</p>
 
 ## Tapping on a marker and showing street view
 
-![Showing Street View](/images/streetview.gif)
+<p align="center">
+  <img src="/images/streetview.gif" width="400" height="800" />
+</p>
 
 ## Animating the map to different markers
 
-![Animating the map](/images/animatemap.gif)
+<p align="center">
+  <img src="/images/animatemap.gif" width="400" height="800" />
+</p>
 
 ## Showing the scale bar
 
-![Showing the scale bar](/images/showscalebar.png)
+<p align="center">
+  <img src="/images/scalebar.gif" width="400" height="800" />
+</p>
 
 # Usage
 
