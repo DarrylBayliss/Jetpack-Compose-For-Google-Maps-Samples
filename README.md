@@ -75,8 +75,6 @@ MAPS_API_KEY=yourkeyhere
 Follow the instructions on the [Maps SDK for Android](https://developers.google.com/maps/documentation/android-sdk/get-api-key) pages if you need to create an API key.
 
 3. Build and run the app.
-   
-4. To run a different sample update the name of the Activity in `AndroidManifest.xml` and run the app.
 
 # Contributing
 
