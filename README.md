@@ -6,7 +6,7 @@
 
 A collection of examples showing how to use the [Jetpack Compose Components](https://github.com/googlemaps/android-maps-compose) for the Google Maps SDK.
 
-The samples include:
+Read the accompanying [blog post](https://www.darrylbayliss.net/jetpack-compose-for-maps/).
 
 ## Showing a map containing a single marker
 
